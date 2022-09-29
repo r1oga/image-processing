@@ -2,13 +2,12 @@ async function init() {
   let rustApp = null
 
   try {
-    rustApp = import('../pkg')
+    rustApp = await import('../pkg')
   } catch (e) {
     console.error(e)
     return
   }
 
-  console.log(rustApp)
   const input = document.getElementById('upload')
 
   // using filereader to transfer strings between JS and Rust
@@ -24,7 +23,8 @@ async function init() {
       /^data:image\/(png|jpeg|jpg);base64,/,
       ''
     )
-    console.log({ base64, raw: input.files[0] })
+
+    rustApp.grayscale(base64)
   }
 }
 
