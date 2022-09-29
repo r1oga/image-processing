@@ -1,3 +1,7 @@
+function showResultImg(imgUrl) {
+  document.getElementById('new-img').setAttribute('src', imgUrl)
+}
+
 async function init() {
   let rustApp = null
 
@@ -24,7 +28,8 @@ async function init() {
       ''
     )
 
-    rustApp.grayscale(base64)
+    const grayscaledImgUrl = rustApp.grayscale(base64)
+    showResultImg(grayscaledImgUrl)
   }
 }
 
