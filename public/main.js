@@ -1,15 +1,13 @@
-let rustApp = null
+async function init() {
+  let rustApp = null
 
-async function loadRustApp() {
   try {
-    import('../pkg')
+    rustApp = import('../pkg')
   } catch (e) {
     console.error(e)
+    return
   }
-}
 
-async function init() {
-  await loadRustApp()
   console.log(rustApp)
   const input = document.getElementById('upload')
 
