@@ -9,6 +9,7 @@
     "build": "webpack serve --mode=production"
   },
   "devDependencies": {
+    "@wasm-tool/wasm-pack-plugin": "^1.6.0",
     "html-webpack-plugin": "^5.5.0",
     "prettier": "^2.7.1",
     "prettier-config-standard": "^5.0.0",
