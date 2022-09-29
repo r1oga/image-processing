@@ -1,4 +1,4 @@
-use std::io::{BufWriter, Cursor};
+use std::io::Cursor;
 use wasm_bindgen::prelude::wasm_bindgen;
 use web_sys::console::log_1;
 use base64::{decode, encode};
