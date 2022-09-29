@@ -11,5 +11,8 @@ module.exports = {
   plugins: [
     new HTMLWebpackPlugin({ template: './public/index.html' }),
     new WasmPackPlugin({ crateDirectory: path.resolve(__dirname, '.') })
-  ]
+  ],
+  experiments: {
+    asyncWebAssembly: true
+  }
 }
